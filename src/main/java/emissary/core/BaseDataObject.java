@@ -1236,7 +1236,7 @@ public class BaseDataObject implements Serializable, Cloneable, Remote, IBaseDat
     }
 
     @Override
-    public void setExtractedRecords(final List<? extends IBaseDataObject> records) {
+    public void setExtractedRecords(final List<IBaseDataObject> records) {
         if (records == null) {
             throw new IllegalArgumentException("Record list must not be null");
         }
@@ -1247,7 +1247,7 @@ public class BaseDataObject implements Serializable, Cloneable, Remote, IBaseDat
             }
         }
 
-        this.extractedRecords = new ArrayList<>(records);
+        this.extractedRecords = records;
     }
 
     @Override
